@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casa de cambio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		label {
+			font-size: 18px;
+			margin-top: 20px;
+		}
+
+		select, input[type="number"] {
+			padding: 10px;
+			font-size: 16px;
+			margin-top: 10px;
+			width: 200px;
+		}
+
+		button {
+			margin-top: 20px;
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="from">Moneda a cambiar:</label>
+		<select id="from">
+			<option value="USD">Dólares</option>
+			<option value="PEN">Soles</option>
+			<option value="EUR">Euros</option>
+		</select>
+
+		<label for="to">Moneda a recibir:</label>
+		<select id="to">
+			<option value="USD">Dólares</option>
+			<option value="PEN">Soles</option>
+			<option value="EUR">Euros</option>
+		</select>
+
+		<label for="amount">Monto a cambiar:</label>
+		<input type="number" id="amount" placeholder="Ingrese el monto a cambiar" required>
+
+		<button onclick="calcular()">Calcular</button>
+	</form>
+
+	<script>
+		function calcular() {
+			let from = document.getElementById("from").value;
+			let to = document.getElementById("to").value;
+			let amount = document.getElementById("amount").value;
+
+			// Aquí se puede agregar la lógica de conversión de moneda y cálculo del total a recibir
+
+			alert("Total a recibir: 1000 " + to); // Se muestra un mensaje de ejemplo con el total a recibir
+		}
+	</script>
+</body>
+</html>
